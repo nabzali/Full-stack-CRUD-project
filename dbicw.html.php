@@ -1,4 +1,4 @@
-<?php include "connect.php";?>
+<?php include "dbi.php.php";?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -19,9 +19,9 @@
     </nav>
     <div class = "boxClass" id="box">
       <h2 id = "h2">Database metrics: </h2>
-      <li>Number of artists: <?php echo data1["artistTotal"]?></li>
-      <li>Number of CDs/Albums: <?php echo data2["cdTotal"]?></li>
-      <li>Number of Tracks: <?php echo data3["trackTotal"];?></li>
+      <li>Number of artists: <?php echo $num ?></li>
+      <li>Number of CDs/Albums: <?php ?></li>
+      <li>Number of Tracks: <?php ?></li>
     </div>
     <!--
     <div class= "boxClass" id = "moreBox" style="display:none">
@@ -42,8 +42,6 @@
       <tbody>
       </tbody>
     </table>
-
-
     <footer>
       <p>G51DBI</p>
       <p><a href="https://www.github.com/nabzali">Nabeel Ali</a> 2018 | Computer Science @ Nottingham</p>
