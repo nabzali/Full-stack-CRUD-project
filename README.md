@@ -18,7 +18,8 @@ I have used PHP to connect to a database I have created, execute code on the ser
 Warning
 --
 Simply downloading this project won't guarantee that it will work. There are a few prerequesites before doing so:
-- I have not provided an SQL file. Until I do so, you will have to make sure that you create your own database with phpMyAdmin, and then make sure its name and schema matches the variable names used in the dbi.php.php file. 
+- I have not provided an SQL file. Until I do so, you will have to make sure that you create your own database with phpMyAdmin, and then make sure its name and schema matches the variable names used in the dbi.php.php file.
+- That you have this project in the correct directory (xampp/htdocs/)
 
 Forking and Cloning
 --
