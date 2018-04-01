@@ -18,12 +18,15 @@ $num_cd = "SELECT COUNT(*) AS cdTotal FROM cd;";
 $num_track = "SELECT COUNT(*) AS trackTotal FROM track;";
 
 $num_artist_result =  mysqli_query($conn, $num_artist);
-/*
 $num_cd_result =  mysqli_query($conn, $num_cd);
 $num_track_result =  mysqli_query($conn, $num_track);
-*/
-$data1 = mysqli_fetch_assoc($num_artist_result);
-$num = $data1["artistTotal"];
 
+$data1 = mysqli_fetch_assoc($num_artist_result);
+$data2 = mysqli_fetch_assoc($num_cd_result);
+$data3 = mysqli_fetch_assoc($num_track_result);
+
+$num1 = $data1["artistTotal"];
+$num2 = $data2["cdTotal"];
+$num3 = $data3["trackTotal"];
 
 mysqli_close($conn);

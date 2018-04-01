@@ -19,9 +19,9 @@
     </nav>
     <div class = "boxClass" id="box">
       <h2 id = "h2">Database metrics: </h2>
-      <li>Number of artists: <?php echo $num ?></li>
-      <li>Number of CDs/Albums: <?php ?></li>
-      <li>Number of Tracks: <?php ?></li>
+      <li>Number of artists: <?php echo $num1 ?></li>
+      <li>Number of CDs/Albums: <?php echo $num2 ?></li>
+      <li>Number of Tracks: <?php echo $num3 ?></li>
     </div>
     <!--
     <div class= "boxClass" id = "moreBox" style="display:none">
