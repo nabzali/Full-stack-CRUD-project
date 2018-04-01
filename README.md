@@ -1,4 +1,4 @@
-# Front End Interface
+# Front End CRUD Interface
 
 Front end user-friednly database interface project. Involved are the following:
 - HTML
@@ -7,7 +7,7 @@ Front end user-friednly database interface project. Involved are the following:
 - PHP
 - SQL
 
-This project allows a user to easily create, remove, update and delete data within a database.
+This project allows a user to easily create, read, update and delete data from a database.
 
 Forking and Cloning
 --
