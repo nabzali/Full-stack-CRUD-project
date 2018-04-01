@@ -1,6 +1,6 @@
 # Front End CRUD Interface
 
-Front end user-friednly database interface project. Involved are the following:
+Front end user-friendly database interface project. Involved are the following:
 - HTML
 - CSS
 - JavaScript (+JQuery)
