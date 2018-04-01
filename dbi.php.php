@@ -22,12 +22,8 @@ $num_artist_result =  mysqli_query($conn, $num_artist);
 $num_cd_result =  mysqli_query($conn, $num_cd);
 $num_track_result =  mysqli_query($conn, $num_track);
 */
-if (mysqli_num_rows($num_artist_result) == 1) {
-    // output data of each row
-    $row = mysqli_fetch_assoc($num_artist_result);
-    $num = $row["artistTotal"];
-} else {
-    $num = 0;
-}
+$data1 = mysqli_fetch_assoc($num_artist_result);
+$num = $data1["artistTotal"];
 
-  mysqli_close($conn);
+
+mysqli_close($conn);
