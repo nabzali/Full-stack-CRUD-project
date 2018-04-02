@@ -29,4 +29,13 @@ $num1 = $data1["artistTotal"];
 $num2 = $data2["cdTotal"];
 $num3 = $data3["trackTotal"];
 
-mysqli_close($conn);
+
+// Above is used to get data for metrics
+
+$select_artist = "SELECT * FROM artist;";
+$select_cd = "SELECT * FROM cd;";
+$select_track = "SELECT * FROM track;";
+
+$select_artist_result =  mysqli_query($conn, $select_artist);
+$select_cd_result =  mysqli_query($conn, $select_cd);
+$select_track_result =  mysqli_query($conn, $select_track);

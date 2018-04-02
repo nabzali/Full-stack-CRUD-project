@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="dbicw.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
     <script src="dbicw.js"></script>
   </head>
   <body>
@@ -19,28 +20,63 @@
     </nav>
     <div class = "boxClass" id="box">
       <h2 id = "h2">Database metrics: </h2>
-      <li>Number of artists: <?php echo $num1 ?></li>
-      <li>Number of CDs/Albums: <?php echo $num2 ?></li>
-      <li>Number of Tracks: <?php echo $num3 ?></li>
+      <li>Number of artists: <?php echo "<b>".$num1."</b>" ?></li>
+      <li>Number of CDs/Albums: <?php echo "<b>".$num2."</b>" ?></li>
+      <li>Number of Tracks: <?php echo "<b>".$num3."</b>" ?></li>
     </div>
-    <!--
-    <div class= "boxClass" id = "moreBox" style="display:none">
-      <li>This is a front end interface to a database designed by Nabeel S Ali.</li>
-      <li>A University of Nottingham Computer Science project.</li>
-      <li>Use the tabs to navigate in order to view the various tables of the database.</li>
-      <li>This project uses HTML, CSS, JavaScript, PHP and SQL.</li>
-    </div>
-    -->
     <form id = "theForm" action=".php" method="post" style="display:none">
-      <input type="text" name="searchBox" placeholder=" Search...">
+      <input id = "search" type="text" name="searchBox" placeholder=" Search...">
     </form>
-    <table id = "table" class = "tableClass" style="display:none">
+    <table id = "table" style="display:none">
       <thead>
-          <tr id = "trHead">
-          </tr>
+        <tr>
+          <th>Artist ID:</th><th>Artist Name:</th>
+        </tr>
       </thead>
-      <tbody>
-      </tbody>
+      <?php
+        echo "<tbody>";
+        if (mysqli_num_rows($select_artist_result) > 0) {
+            // output data of each row
+            while($row = mysqli_fetch_assoc($select_artist_result)) {
+                echo "<tr>";
+                echo "<td>" . $row["artID"]. "</td><td>" . $row["artName"] . "</td>";
+                echo "<td><div style = 'background-color: #18BC9C' class = 'button'>Edit</div></td>";
+                echo "<td><div style = 'background-color: #ff4d4d' class = 'button'>Delete</div></td>";
+                echo "<td><div style = 'background-color: #0099cc' class = 'button'>Albums</div></td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "0 results.";
+        }
+        echo "</tbody>";
+
+      ?>
+      <tr><td><br><div id = 'newArtist' class='button'>Add New Artist</div><td><tr>
+    </table>
+    <table id = "table2" style="display:none">
+      <thead>
+        <tr>
+          <th>CD ID:</th><th>Artist ID:</th><th>CD Title:</th><th>CD Price:</th><th>CD Genre:</th>
+        </tr>
+      </thead>
+      <?php
+        echo "<tbody>";
+        if (mysqli_num_rows($select_cd_result) > 0) {
+            // output data of each row
+            while($row = mysqli_fetch_assoc($select_cd_result)) {
+                echo "<tr>";
+                echo "<td>" . $row["cdID"]. "</td><td>" . $row["artID"]. "</td><td>" . $row["cdTitle"] . "</td><td>" . $row["cdPrice"] . "</td><td>" . $row["cdGenre"] . "</td>";
+                echo "<td><div style = 'background-color: #18BC9C' class = 'button'>Edit</div></td>";
+                echo "<td><div style = 'background-color: #ff4d4d' class = 'button'>Delete</div></td>";
+                echo "<td><div style = 'background-color: #0099cc' class = 'button'>Tracks</div></td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "0 results.";
+        }
+        echo "</tbody>";
+      ?>
+      <tr><td><br><div id = 'newAlbum' class='button'>Add New Album</div><td><tr>
     </table>
     <footer>
       <p>G51DBI</p>
@@ -48,3 +84,9 @@
     </footer>
   </body>
 </html>
+<?php
+mysqli_free_result($num_artist_result);
+mysqli_free_result($num_cd_result);
+mysqli_free_result($num_track_result);
+mysqli_close($conn);
+?>
