@@ -39,3 +39,9 @@ $select_track = "SELECT * FROM track;";
 $select_artist_result =  mysqli_query($conn, $select_artist);
 $select_cd_result =  mysqli_query($conn, $select_cd);
 $select_track_result =  mysqli_query($conn, $select_track);
+
+
+function delete($id)
+{
+  
+}

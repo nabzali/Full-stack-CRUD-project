@@ -24,9 +24,9 @@
       <li>Number of CDs/Albums: <?php echo "<b>".$num2."</b>" ?></li>
       <li>Number of Tracks: <?php echo "<b>".$num3."</b>" ?></li>
     </div>
-    <form id = "theForm" action=".php" method="post" style="display:none">
+
+    <form id = "theForm" action=".php" method="post" style="display:none"> <!-- First form -->
       <input id = "search" type="text" name="searchBox" placeholder=" Search...">
-    </form>
     <table id = "table" style="display:none">
       <thead>
         <tr>
@@ -42,7 +42,7 @@
                 echo "<td>" . $row["artID"]. "</td><td>" . $row["artName"] . "</td>";
                 echo "<td><div style = 'background-color: #18BC9C' class = 'button'>Edit</div></td>";
                 echo "<td><div style = 'background-color: #ff4d4d' class = 'button'>Delete</div></td>";
-                echo "<td><div style = 'background-color: #0099cc' class = 'button'>Albums</div></td>";
+                echo "<td><div style = 'background-color: #00ace6' class = 'button'>Albums</div></td>";
                 echo "</tr>";
             }
         } else {
@@ -52,32 +52,37 @@
 
       ?>
       <tr><td><br><div id = 'newArtist' class='button'>Add New Artist</div><td><tr>
+    </form>
     </table>
-    <table id = "table2" style="display:none">
-      <thead>
-        <tr>
-          <th>CD ID:</th><th>Artist ID:</th><th>CD Title:</th><th>CD Price:</th><th>CD Genre:</th>
-        </tr>
-      </thead>
-      <?php
-        echo "<tbody>";
-        if (mysqli_num_rows($select_cd_result) > 0) {
-            // output data of each row
-            while($row = mysqli_fetch_assoc($select_cd_result)) {
-                echo "<tr>";
-                echo "<td>" . $row["cdID"]. "</td><td>" . $row["artID"]. "</td><td>" . $row["cdTitle"] . "</td><td>" . $row["cdPrice"] . "</td><td>" . $row["cdGenre"] . "</td>";
-                echo "<td><div style = 'background-color: #18BC9C' class = 'button'>Edit</div></td>";
-                echo "<td><div style = 'background-color: #ff4d4d' class = 'button'>Delete</div></td>";
-                echo "<td><div style = 'background-color: #0099cc' class = 'button'>Tracks</div></td>";
-                echo "</tr>";
-            }
-        } else {
-            echo "0 results.";
-        }
-        echo "</tbody>";
-      ?>
-      <tr><td><br><div id = 'newAlbum' class='button'>Add New Album</div><td><tr>
-    </table>
+
+    <form id="form2" action="index.html" method="post"> <!-- Second form -->
+      <table id = "table2" style="display:none">
+        <thead>
+          <tr>
+            <th>CD ID:</th><th>Artist ID:</th><th>CD Title:</th><th>CD Price:</th><th>CD Genre:</th>
+          </tr>
+        </thead>
+        <?php
+          echo "<tbody>";
+          if (mysqli_num_rows($select_cd_result) > 0) {
+              // output data of each row
+              while($row = mysqli_fetch_assoc($select_cd_result)) {
+                  echo "<tr>";
+                  echo "<td>" . $row["cdID"]. "</td><td>" . $row["artID"]. "</td><td>" . $row["cdTitle"] . "</td><td>" . $row["cdPrice"] . "</td><td>" . $row["cdGenre"] . "</td>";
+                  echo "<td><div style = 'background-color: #18BC9C' class = 'button'>Edit</div></td>";
+                  echo "<td><div style = 'background-color: #ff4d4d' class = 'button'>Delete</div></td>";
+                  echo "<td><div style = 'background-color: #00ace6' class = 'button'>Tracks</div></td>";
+                  echo "</tr>";
+              }
+          } else {
+              echo "0 results.";
+          }
+          echo "</tbody>";
+        ?>
+        <tr><td><br><div id = 'newAlbum' class='button'>Add New Album</div><td><tr>
+      </table>
+    </form>
+
     <footer>
       <p>G51DBI</p>
       <p><a href="https://www.github.com/nabzali">Nabeel Ali</a> 2018 | Computer Science @ Nottingham</p>
