@@ -96,7 +96,6 @@ tr{
 .boxClass li {
   list-style: none;
   padding-left: 10px;
-  font-size: 14px;
 
 }
 
@@ -147,20 +146,16 @@ p{
 }
 
 header{
-  font-family: 'Alegreya Sans SC', sans-serif;
-  font-family: 'Arvo', serif;
-  color: grey;#6EB6D7;
+  /*font-family: 'Alegreya Sans SC', sans-serif;
+  font-family: 'Arvo', serif;*/
+  color: #6EB6D7;#6EB6D7;
   font-size: 40px;
-  font-weight: bold;
+  font-weight:bold;
   letter-spacing: 6px;
   margin-bottom: 15px;
   margin-top: 15px;
-  padding-left: 10px;
+  padding-left: 25px;
   text-transform: uppercase;
-}
-
-header:hover{
-  color: #99A3A4;
 }
 
 nav{
