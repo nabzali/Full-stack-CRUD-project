@@ -21,10 +21,4 @@ Simply downloading this project won't guarantee that it will work. There are a f
 - I have not provided an SQL file of commands that create a database. You will have to make sure that you create your own database with phpMyAdmin, and then make sure its name, table names, schema etc matches the variable names used in the dbi.php.php file.
 - That you have this project in the correct directory (xampp/htdocs/)
 
-Forking and Cloning
---
-Easy copy & paste for cloning:
-```bash
-$ git clone https://github.com/nabzali/front-end-crud-interface.git
-```
 Nabeel Ali 2018 | [Computer Science](https://www.nottingham.ac.uk/computerscience/) at Nottingham
