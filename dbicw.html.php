@@ -51,9 +51,8 @@
         echo "</tbody>";
 
       ?>
-      <tr><td><br><div id = 'newArtist' class='button'>Add New Artist</div><td><tr>
-
     </table>
+    <div id = 'newArtist' class='button'>Add New Artist</div>
     </form>
     <form id="form2" class = "form" action="index.html" method="post" style="display:none"><!-- Second form -->
       <input id = "search2" class = "search" type="text" name="searchBox" placeholder="Search...">
@@ -80,8 +79,8 @@
           }
           echo "</tbody>";
         ?>
-        <tr><td><br><div id = 'newAlbum' class='button'>Add New Album</div><td><tr>
       </table>
+      <div id = 'newAlbum' class='button'>Add New Album</div>
     </form>
 
     <footer>

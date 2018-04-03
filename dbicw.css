@@ -14,12 +14,24 @@ body{
 
 }
 
+table{
+  color: grey;
+  padding: 10px;
+  padding-left:15px;
+  padding-right:15px;
+  margin-top: 20px;
+  margin-left:0px;
+  margin-right: 0px;
+  border: 1px solid lightgrey;
+  background-color: white;
+}
+
 form{
   margin:0px;
 }
 
 .button{
-  width:auto;
+  width: auto;
   height:20px;
   font-size: 13px;
   color: white;
@@ -35,16 +47,18 @@ form{
 
 .button:hover{
   cursor: pointer;
-  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.5);
 
 }
 
 #newAlbum, #newArtist{
   background-color: #C12267;
   height:30px;
+  width: 100px;
   padding-left:20px;
   padding-right:20px;
   padding-top: 13px;
+  margin-top:20px;
 }
 
 .form{
@@ -58,24 +72,19 @@ form{
   padding-left: 10px;
 }
 
-table{
-  color: grey;
-  padding: 10px;
-  margin-top: 20px;
-  margin-left:0px;
-  margin-right:900px;
-  width:auto;
-  border: 1px solid lightgrey;
-  background-color: white;
-}
-
 thead{
   color: #6EB6D7;
 }
 
 th, td {
   text-align: left;
-  padding-right: 15px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+th{
+  padding-right:0px;
+  width:auto;
 }
 /* Dont know why this doesnt work
 tr{
