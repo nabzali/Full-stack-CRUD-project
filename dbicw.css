@@ -47,14 +47,15 @@ form{
   padding-top: 13px;
 }
 
-#theForm{
+.form{
   margin-left:25px;
   margin-top:20px;
 }
 
-#search{
+.search{
   width: 250px;
   height: 25px;
+  padding-left: 10px;
 }
 
 table{

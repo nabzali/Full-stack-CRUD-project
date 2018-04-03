@@ -25,9 +25,9 @@
       <li>Number of Tracks: <?php echo "<b>".$num3."</b>" ?></li>
     </div>
 
-    <form id = "theForm" action=".php" method="post" style="display:none"> <!-- First form -->
-      <input id = "search" type="text" name="searchBox" placeholder=" Search...">
-    <table id = "table" style="display:none">
+    <form id = "theForm" class = "form" action=".php" method="post" style="display:none"> <!-- First form -->
+      <input id = "search1" class = "search" type="text" name="searchBox" placeholder="Search...">
+    <table id = "table">
       <thead>
         <tr>
           <th>Artist ID:</th><th>Artist Name:</th>
@@ -52,11 +52,12 @@
 
       ?>
       <tr><td><br><div id = 'newArtist' class='button'>Add New Artist</div><td><tr>
-    </form>
-    </table>
 
-    <form id="form2" action="index.html" method="post"> <!-- Second form -->
-      <table id = "table2" style="display:none">
+    </table>
+    </form>
+    <form id="form2" class = "form" action="index.html" method="post" style="display:none"><!-- Second form -->
+      <input id = "search2" class = "search" type="text" name="searchBox" placeholder="Search...">
+      <table id = "table2">
         <thead>
           <tr>
             <th>CD ID:</th><th>Artist ID:</th><th>CD Title:</th><th>CD Price:</th><th>CD Genre:</th>
