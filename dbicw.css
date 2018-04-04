@@ -11,7 +11,6 @@ body{
   background-color: #FBFCFC;
   color: #6b6568;
   margin:0px;
-
 }
 
 table{
@@ -80,18 +79,18 @@ th, td {
   text-align: left;
   padding-left: 8px;
   padding-right: 8px;
+  padding-bottom: 10px;
 }
 
 th{
   padding-right:0px;
   width:auto;
 }
-/* Dont know why this doesnt work
+
 tr{
   border-bottom: grey;
-  padding-bottom: 5px;
 }
-*/
+
 .boxClass {
   border: 1px solid lightgrey;
   background-color: white;
@@ -183,7 +182,5 @@ footer{
   font-size: 11px;
   letter-spacing: 1px;
   margin-top: 50px;
-  padding-top: 8px;
-  width: 100%
-
+  width: 100%;
 }

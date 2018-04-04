@@ -41,7 +41,17 @@ $select_cd_result =  mysqli_query($conn, $select_cd);
 $select_track_result =  mysqli_query($conn, $select_track);
 
 
-function delete($id)
+function deleteArtist($id)
 {
-  
+  $sql = "DELETE FROM artist WHERE artID = $id;";
+}
+
+function deleteCD($id)
+{
+  $sql = "DELETE FROM cd WHERE cdID = $id;";
+}
+
+function deleteTrack($id)
+{
+  $sql = "DELETE FROM track WHERE trackID = $id;";
 }
