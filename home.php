@@ -1,4 +1,4 @@
-<?php require "connect.php";?>
+<?php require "index.php";?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
