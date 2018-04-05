@@ -10,7 +10,7 @@ require "home.php";
 </script>
 
 
-<form id = "theForm" class = "form" action=".php" method="post"> <!-- First form -->
+<form id = "theForm" class = "form" action="artist.php" method="post"> <!-- First form -->
   <input id = "search1" class = "search" type="text" name="searchBox1" placeholder="Search...">
 <table id = "table">
   <thead>

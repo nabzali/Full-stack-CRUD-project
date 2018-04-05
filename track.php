@@ -8,7 +8,7 @@ require "home.php";
   document.title = "Tracks";
 </script>
 
-<form id="form3" class = "form" action=".html" method="post"><!-- Third form -->
+<form id="form3" class = "form" action="track.php" method="post"><!-- Third form -->
   <input id = "search3" class = "search" type="text" name="searchBox3" placeholder="Search...">
   <table id = "table3">
     <thead>

@@ -7,7 +7,7 @@ require "home.php";
   document.getElementById("h").innerHTML = "Albums";
   document.title = "Albums";
 </script>
-<form id="form2" class = "form" action="index.html" method="post"><!-- Second form -->
+<form id="form2" class = "form" action="album.php" method="post"><!-- Second form -->
   <input id = "search2" class = "search" type="text" name="searchBox2" placeholder="Search...">
   <table id = "table2">
     <thead>

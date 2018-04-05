@@ -55,3 +55,22 @@ function deleteTrack($id)
 {
   $sql = "DELETE FROM track WHERE trackID = $id;";
 }
+
+
+if (isset ($_POST['searchBox1'])){
+  $s = $_POST['searchBox1'];
+  $sql = "SELECT * FROM artist WHERE artName LIKE '%$s%';";
+  $select_artist_result = mysqli_query($conn, $sql);
+  }
+
+if (isset ($_POST['searchBox2'])){
+  $s = $_POST['searchBox2'];
+  $sql = "SELECT * FROM cd WHERE cdTitle LIKE '%$s%';";
+  $select_cd_result = mysqli_query($conn, $sql);
+  }
+
+if (isset ($_POST['searchBox3'])){
+  $s = $_POST['searchBox3'];
+  $sql = "SELECT * FROM track WHERE trackName LIKE '%$s%';";
+  $select_track_result = mysqli_query($conn, $sql);
+  }
