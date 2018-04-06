@@ -1,5 +1,7 @@
 <?php
 require "home.php";
+
+
 ?>
 
 <script>
@@ -25,7 +27,7 @@ require "home.php";
         while($row = mysqli_fetch_assoc($select_artist_result)) {
             echo "<tr>";
             echo "<td>" . $row["artID"]. "</td><td>" . $row["artName"] . "</td>";
-            echo "<td><div style = 'background-color: #18BC9C' class = 'button'>Edit</div></td>";
+            echo "<td><div style = 'background-color: #18BC9C' class = 'button'><a href = 'editArtist.php'>Edit</a></div></td>";
             echo "<td><div style = 'background-color: #ff4d4d' class = 'button'>Delete</div></td>";
             echo "<td><div style = 'background-color: #00ace6' class = 'button'>Albums</div></td>";
             echo "</tr>";
@@ -37,5 +39,5 @@ require "home.php";
 
   ?>
 </table>
-<div id = 'newArtist' class='button'>Add New Artist</div>
+<div id = 'newArtist' class='button'><a href = "newArtist.php">Add New Artist</a></div>
 </form>

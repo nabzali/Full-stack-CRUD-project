@@ -40,23 +40,6 @@ $select_artist_result =  mysqli_query($conn, $select_artist);
 $select_cd_result =  mysqli_query($conn, $select_cd);
 $select_track_result =  mysqli_query($conn, $select_track);
 
-
-function deleteArtist($id)
-{
-  $sql = "DELETE FROM artist WHERE artID = $id;";
-}
-
-function deleteCD($id)
-{
-  $sql = "DELETE FROM cd WHERE cdID = $id;";
-}
-
-function deleteTrack($id)
-{
-  $sql = "DELETE FROM track WHERE trackID = $id;";
-}
-
-
 if (isset ($_POST['searchBox1'])){
   $s = $_POST['searchBox1'];
   $sql = "SELECT * FROM artist WHERE artName LIKE '%$s%';";

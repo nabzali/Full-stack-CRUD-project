@@ -4,7 +4,7 @@ require "home.php";
 <script>
   $( ".boxClass" ).hide();
   $("footer").insertAfter($("body"));
-  document.getElementById("h").innerHTML = "Albums";
+  document.getElementById("h").innerHTML = "Albums/CDs";
   document.title = "Albums";
 </script>
 <form id="form2" class = "form" action="album.php" method="post"><!-- Second form -->
@@ -33,5 +33,5 @@ require "home.php";
       echo "</tbody>";
     ?>
   </table>
-  <div id = 'newAlbum' class='button'>Add New Album</div>
+  <div id = 'newAlbum' class='button'><a href = "newAlbum.php">Add New Album</a></div>
 </form>

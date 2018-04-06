@@ -33,5 +33,5 @@ require "home.php";
       echo "</tbody>";
     ?>
   </table>
-  <div id = 'newTrack' class='button'>Add New Track</div>
+  <div id = 'newTrack' class='button'><a href="newTrack.php">Add New Track</a></div>
 </form>

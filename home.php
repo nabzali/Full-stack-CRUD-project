@@ -19,7 +19,7 @@
       <li><a href = "album.php">Albums</a></li>
       <li><a href = "track.php">Tracks</a></li>
     </nav>
-    <div class = "boxClass" id="box">
+    <div class = "boxClass" id="box" style="padding:10px">
       <h2 id = "h2">Database metrics: </h2>
       <li>Number of artists: <?php echo "<b>".$num1."</b>" ?></li>
       <li>Number of CDs/Albums: <?php echo "<b>".$num2."</b>" ?></li>
@@ -35,5 +35,5 @@
 mysqli_free_result($num_artist_result);
 mysqli_free_result($num_cd_result);
 mysqli_free_result($num_track_result);
-mysqli_close($conn);
+
 ?>

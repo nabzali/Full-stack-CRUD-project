@@ -94,7 +94,6 @@ th{
   margin-top: 25px;
   width: 350px;
   height: 110px;
-
 }
 
 .boxClass li {
@@ -119,7 +118,7 @@ nav li{
   float: left;
   padding:20px;
   margin:0px;
-  height: 18px;;
+  height: 18px;
   /*display: block;*/
   letter-spacing: 2px;
 
@@ -134,10 +133,17 @@ nav li:hover{
 
 }
 
-nav a{
+ nav a{
   text-decoration:none;
   border-bottom:none;
   color: white;
+}
+
+.button a{
+  text-decoration:none;
+  border-bottom:none;
+  color: white;
+
 }
 
 footer a{
@@ -148,7 +154,7 @@ footer a{
 
 a:hover{
   color: lightblue;
-  border: none;
+  border-bottom: 1px dotted lightblue;
 }
 
 p{
