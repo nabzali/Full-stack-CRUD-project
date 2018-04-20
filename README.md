@@ -13,9 +13,9 @@ How it works
 --
 [XAMPP](https://www.apachefriends.org/index.html) is a software package which gives you the priveledge of connecting to an Apache server. Using Apache, along with MySQL, you can create and manipulate databases which can be created using the phyMyAdmin software tool provided. 
 
-As a back-end language, PHP can execute on an external server. Using PHP I can then retrieve data from my designated apache server port which can be fed back to my local machine and rendered/executed in my browser. Equally, I can send data from my browser to the server in order to update my databases if necessary. This capability has led me to develop this project, using many web technologies in addition to PHP.
+As a back-end language, PHP can execute on an external server. I have used PHP to retrieve data from my designated apache server port, which can be fed back to my local machine and rendered/executed in my browser. Equally, I've used it to send data from my browser to the server in order to update my databases if necessary. This capability has led me to develop this project, of course using many web technologies in addition to PHP.
 
-For this to work the directory for all of the files is (crucially) located inside the htdocs folder which can be found in the xampp directory, once you have xampp installed.
+For this to work the directory for all of the files is (crucially) located inside the htdocs folder which can be found in your xampp directory, once you have xampp installed.
 
 Warning
 --
