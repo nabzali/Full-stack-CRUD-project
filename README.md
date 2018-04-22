@@ -19,6 +19,6 @@ For this to work the directory for all of the files is (crucially) located insid
 
 Warning
 --
-Simply downloading this project won't work, even you download it in ~xampp/htdocs. This is because I satisfy the prerequisite of having the appropriately named database and tables that matches exactly with the context of these files. However, for inspection purposes, anyone is welcome to view my code.
+Simply downloading this project won't work, even you download it in ~xampp/htdocs. This is because I satisfy the prerequisite of having the appropriately named database and tables that match exactly with the context of these files. However, for inspection purposes, anyone is welcome to view my code.
 
 Nabeel Ali 2018 | [Computer Science](https://www.nottingham.ac.uk/computerscience/) at Nottingham
