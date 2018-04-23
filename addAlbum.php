@@ -1,5 +1,7 @@
 <?php
 require "header.php";
+$artists = "SELECT artName FROM artist";
+$result = mysqli_query($conn, $artists);
  ?>
 <script>
    //$("h1#title").html("");
@@ -10,7 +12,7 @@ require "header.php";
   <table class = "updater">
     <tr>
       <td>Title:</td>
-      <td><input type="text" name="addAlbumName"></td>
+      <td><input type="text" name="addAlbumTitle"></td>
     </tr>
     <tr>
       <td>Price:</td>
@@ -19,6 +21,18 @@ require "header.php";
     <tr>
       <td>Genre:</td>
       <td><input type="text" name="addAlbumGenre"></td>
+    </tr>
+    <tr>
+      <td>Artist:</td>
+      <td>
+        <select><?php
+          if (mysqli_num_rows($result) > 0) {
+            while($row = mysqli_fetch_assoc($result)) {?>
+                <option value="#"><?php echo $row["artName"]?></option><?php
+            }
+          }
+        ?></select>
+      </td>
     </tr>
     <tr>
       <td>Tracks:</td>

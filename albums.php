@@ -13,6 +13,11 @@ if (isset ($_GET["del"])){
   mysqli_query($conn, $delete_album);
   header("Location: albums.php");
 }
+if (isset ($_GET["al"])){
+  $al = $_GET["al"];
+  $select_album = "SELECT cdID, cdTitle, cdGenre, cdNumTracks, artName FROM artist, cd WHERE (artist.artID = cd.artID) AND (cd.artID = $al) ORDER BY cdID";
+  $select_album_result = mysqli_query($conn, $select_album);
+}
 ?>
 <script>
     //$("h1#title").html("ALBUMS");
@@ -39,7 +44,7 @@ if (isset ($_GET["del"])){
             echo "<td>" . $row["cdID"]. "</td><td>" . $row["cdTitle"] . "</td><td>" . $row["cdGenre"] . "</td><td>" . $row["cdNumTracks"] . "</td><td>" . $row["artName"] . "</td>";?>
             <td><a href = "albums.php?del=<?php echo $row['cdID']?>">Delete</a></td>
             <td><a href = "editAlbum.php?ed=<?php echo $row['cdID']?>"class="editButton">Edit</a></td>
-            <td><a href = "#" class = "blueButton">Tracks</a><td>
+            <td><a href = "tracks.php?tr=<?php echo $row['cdID']?>" class = "blueButton">Tracks</a><td>
             <?php echo "</tr>";
         }
     } else {

@@ -21,9 +21,9 @@ function checkInput(){
   }
 }
 </script><script>
-//$("h1#title").html("");
-document.getElementById("title").innerHTML = "EDIT ARTIST";
-document.title = "Edit Artist";
+  //$("h1#title").html("");
+  document.getElementById("title").innerHTML = "EDIT ARTIST";
+  document.title = "Edit Artist";
 
 </script>
 <form name = "editArtist" onsubmit="checkInput()" class="" action="editArtist.php?ed=<?php echo $_GET["ed"]; ?>" method="post">

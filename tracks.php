@@ -13,6 +13,11 @@ if (isset ($_GET["del"])){
   mysqli_query($conn, $delete_track);
   header("Location: tracks.php");
 }
+if (isset ($_GET["tr"])){
+  $tr = $_GET["tr"];
+  $select_track = "SELECT trackID, trackName, trackDuration, cdTitle, artName FROM track, artist, cd WHERE (cd.cdID = track.cdID) AND (cd.artID = artist.artID) AND (track.cdID = $tr) ORDER BY trackID";
+  $select_track_result = mysqli_query($conn, $select_track);
+}
 ?>
 <script>
     //$("h1#title").html("TRACKS");
