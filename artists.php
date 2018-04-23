@@ -38,8 +38,9 @@ if (isset ($_GET["del"])){
             $artist = $row["artName"];
             echo "<tr>";
             echo "<td>" . $row["artID"]. "</td><td>" . $artist . "</td>";?>
-            <td><a href = "editArtist.php?ed=<?php echo $row['artID']?>"class="editButton">Edit</a></td>
             <td><a href = "artists.php?del=<?php echo $row['artID']?>">Delete</a></td>
+            <td><a href = "editArtist.php?ed=<?php echo $row['artID']?>"class="editButton">Edit</a></td>
+            <td><a href = "#" class = "blueButton">Albums</a><td>
             <?php echo "</tr>";
         }
     } else {

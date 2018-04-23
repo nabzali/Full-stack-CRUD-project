@@ -12,8 +12,13 @@ if (isset($_POST["addArtistInput"])){
    document.title = "Add Artist";
 </script>
 <form class="" action="addArtist.php" method="post">
-  <p>Add new Artist:</p>
-  <input type="text" name="addArtistInput" placeholder="Name...">
-  <input type="submit" name="save" value="Save">
-  <a href= "artists.php">Back</a>
+  <table class = "updater">
+    <td>Name:</td>
+    <td><input type="text" name="addArtistInput"></td>
+    <td><input type="submit" name="save" value="Save"></td>
+    <td><a href= "artists.php">Back</a></td>
+  </table>
 </form>
+
+</body>
+</html>

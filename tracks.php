@@ -7,6 +7,12 @@ if (isset ($_POST['search3'])){
   $sql = "SELECT trackID, trackName, trackDuration, cdTitle, artName FROM track, artist, cd WHERE cd.cdID = track.cdID AND cd.artID = artist.artID AND (trackID LIKE '%$data%' OR trackName LIKE '%$data%' OR trackDuration LIKE '%$data%' OR cdTitle LIKE '%$data%' OR artName LIKE '%$data%') ORDER BY trackID";
   $select_track_result = mysqli_query($conn, $sql);
 }
+if (isset ($_GET["del"])){
+  $delete = $_GET["del"];
+  $delete_track = "DELETE FROM track WHERE trackID = $delete";
+  mysqli_query($conn, $delete_track);
+  header("Location: tracks.php");
+}
 ?>
 <script>
     //$("h1#title").html("TRACKS");
@@ -30,9 +36,10 @@ if (isset ($_POST['search3'])){
         // output data of each row
         while($row = mysqli_fetch_assoc($select_track_result)) {
             echo "<tr>";
-            echo "<td>" . $row["trackID"]. "</td><td>" . $row["trackName"] . "</td><td>" . $row["trackDuration"] . "</td><td>" . $row["cdTitle"] . "</td><td>" . $row["artName"] . "</td>";
-            //extras
-            echo "</tr>";
+            echo "<td>" . $row["trackID"]. "</td><td>" . $row["trackName"] . "</td><td>" . $row["trackDuration"] . "</td><td>" . $row["cdTitle"] . "</td><td>" . $row["artName"] . "</td>"; ?>
+            <td><a href = "tracks.php?del=<?php echo $row['trackID']?>">Delete</a></td>
+            <td><a href = "editTrack.php?ed=<?php echo $row['trackID']?>"class="editButton">Edit</a></td>
+            <?php echo "</tr>";
         }
     } else {
       echo "<p style = 'padding-left:10px'>0 results.</p>";

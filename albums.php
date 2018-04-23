@@ -6,7 +6,13 @@ if (isset ($_POST['search2'])){
   $data = $_POST['search2'];
   $sql = "SELECT cdID, cdTitle, cdGenre, cdNumTracks, artName FROM artist, cd WHERE (artist.artID = cd.artID) AND (cdGenre LIKE '%$data%' OR cdTitle LIKE '%$data%' OR cdID LIKE '%$data%' OR cdNumTracks LIKE '%$data%' OR artName LIKE '%$data%') ORDER BY cdID";
   $select_album_result = mysqli_query($conn, $sql);
-  }
+}
+if (isset ($_GET["del"])){
+  $delete = $_GET["del"];
+  $delete_album = "DELETE FROM cd WHERE cdID = $delete";
+  mysqli_query($conn, $delete_album);
+  header("Location: albums.php");
+}
 ?>
 <script>
     //$("h1#title").html("ALBUMS");
@@ -30,9 +36,11 @@ if (isset ($_POST['search2'])){
         // output data of each row
         while($row = mysqli_fetch_assoc($select_album_result)) {
             echo "<tr>";
-            echo "<td>" . $row["cdID"]. "</td><td>" . $row["cdTitle"] . "</td><td>" . $row["cdGenre"] . "</td><td>" . $row["cdNumTracks"] . "</td><td>" . $row["artName"] . "</td>";
-            //extras
-            echo "</tr>";
+            echo "<td>" . $row["cdID"]. "</td><td>" . $row["cdTitle"] . "</td><td>" . $row["cdGenre"] . "</td><td>" . $row["cdNumTracks"] . "</td><td>" . $row["artName"] . "</td>";?>
+            <td><a href = "albums.php?del=<?php echo $row['cdID']?>">Delete</a></td>
+            <td><a href = "editAlbum.php?ed=<?php echo $row['cdID']?>"class="editButton">Edit</a></td>
+            <td><a href = "#" class = "blueButton">Tracks</a><td>
+            <?php echo "</tr>";
         }
     } else {
       echo "<p style = 'padding-left:10px'>0 results.</p>";

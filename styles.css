@@ -3,6 +3,11 @@
   color: darkgrey;
 }
 
+.updater{
+  padding: 0px;
+  margin: 0px;
+}
+
 .addButton{
   padding: 10px;
   width: 100px;
