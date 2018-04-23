@@ -1,6 +1,6 @@
 <?php
 require "header.php";
-if (isset($_POST["addArtistInput"])){
+if (isset($_POST["save"])){
   $newArtist = $_POST["addArtistInput"];
   $sql = "INSERT INTO artist VALUES (null, '$newArtist')";
   mysqli_query($conn, $sql);

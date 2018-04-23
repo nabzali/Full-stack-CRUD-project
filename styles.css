@@ -42,6 +42,9 @@ h2{
   padding: 10px;
 }
 
+b{
+  color:black;
+}
 
 #title{
   padding-left: 10px;
@@ -53,10 +56,21 @@ nav li{
   border: 1px solid grey;
   display: inline-block;
   padding: 10px;
+  background-color: grey;
+  color:white;
+  letter-spacing: 1px;
+  transition-duration: 0.4s;
+}
+nav li:hover {
+  font-weight: bold;
+  cursor: pointer;
+  color: #00ffd8;
+  /*background-color: rgba(255,255,255,0.3);*/
 }
 
 nav{
   border: 1px solid grey;
+  background-color: grey;
 
 }
 
