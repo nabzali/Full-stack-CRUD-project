@@ -32,7 +32,7 @@ if (isset ($_GET["al"])){
 <table>
   <thead>
     <tr>
-      <th>CD ID:</th><th>Title:</th><th>Price:</th><th>Genre:</th><th>No. Tracks:</th><th>Artist Name:</th>
+      <th>CD ID:</th><th>Title:</th><th>Price:</th><th>Genre:</th><th>No. Tracks:</th><th>Artist Name:</th><th colspan="3">Options:</th>
     </tr>
   </thead>
   <?php
@@ -43,9 +43,9 @@ if (isset ($_GET["al"])){
             echo "<tr>";
             echo "<td>" . $row["cdID"]. "</td><td>" . $row["cdTitle"] . "</td><td>" . "<small>$</small>" . $row["cdPrice"] . "</td><td>" . $row["cdGenre"] . "</td><td>" . $row["cdNumTracks"] . "</td><td>" . $row["artName"] . "</td>";
             ?>
-            <td><a href = "albums.php?del=<?php echo $row['cdID']?>">Delete</a></td>
-            <td><a href = "editAlbum.php?ed=<?php echo $row['cdID']?>"class="editButton">Edit</a></td>
-            <td><a href = "tracks.php?tr=<?php echo $row['cdID']?>" class = "blueButton">Tracks</a><td>
+            <td><a href = "albums.php?del=<?php echo $row['cdID']?>" class = "deleteButton"= >Delete</a></td>
+            <td><a href = "editAlbum.php?ed=<?php echo $row['cdID']?>" class = "editButton">Edit</a></td>
+            <td><a href = "tracks.php?tr=<?php echo $row['cdID']?>" class = "blueButton">Tracks</a></td>
             <?php echo "</tr>";
         }
     } else {
@@ -56,6 +56,7 @@ if (isset ($_GET["al"])){
 
   ?>
 </table>
-<a href = "addAlbum.php"><div class="addButton">Add Album</div></a>
+<a href = "addAlbum.php" class="addButton">Add New Album</a>
+<?php include "footer.php"; ?>
 </body>
 </html>

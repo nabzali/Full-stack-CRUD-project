@@ -32,7 +32,7 @@ if (isset ($_GET["tr"])){
 <table>
   <thead>
     <tr>
-      <th>Track ID:</th><th>Track Title:</th><th>Track Duration:</th><th>CD Title:</th><th>Artist Name:</th>
+      <th>Track ID:</th><th>Track Title:</th><th>Track Duration:</th><th>CD Title:</th><th>Artist Name:</th><th colspan="2">Options:</th>
     </tr>
   </thead>
   <?php
@@ -42,7 +42,7 @@ if (isset ($_GET["tr"])){
         while($row = mysqli_fetch_assoc($select_track_result)) {
             echo "<tr>";
             echo "<td>" . $row["trackID"]. "</td><td>" . $row["trackName"] . "</td><td>" . $row["trackDuration"] . "</td><td>" . $row["cdTitle"] . "</td><td>" . $row["artName"] . "</td>"; ?>
-            <td><a href = "tracks.php?del=<?php echo $row['trackID']?>">Delete</a></td>
+            <td><a href = "tracks.php?del=<?php echo $row['trackID']?>" class = "deleteButton">Delete</a></td>
             <td><a href = "editTrack.php?ed=<?php echo $row['trackID']?>"class="editButton">Edit</a></td>
             <?php echo "</tr>";
         }
@@ -54,6 +54,7 @@ if (isset ($_GET["tr"])){
 
   ?>
 </table>
-<a href = "addTrack.php"><div class="addButton">Add Track</div></a>
+<a href = "addTrack.php" class="addButton">Add New Track:</a>
+<?php include "footer.php"; ?>
 </body>
 </html>

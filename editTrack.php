@@ -31,8 +31,11 @@ $result = mysqli_query($conn, $albums);
     </td>
     </tr>
     <tr>
-      <td><input type="submit" name="save" value="Save"></td>
-      <td><a href= "tracks.php">Back</a></td>
+      <td><input type="submit" name="save" value="Save" class = "save"></td>
+      <td><a href= "tracks.php" class = "back">Back</a></td>
     </tr>
   </table>
 </form>
+<?php include "footer.php"; ?>
+</body>
+</html>

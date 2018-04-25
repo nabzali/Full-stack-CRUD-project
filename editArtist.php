@@ -30,13 +30,10 @@ function checkInput(){
   <table class = "updater">
     <td>Name:</td>
     <td><input id = "editArtistInput" type="text" name="editArtistInput"></td>
-    <td><input type="submit" name="save" value="Save"></td>
-    <td><a href= "artists.php">Back</a></td>
+    <td><input type="submit" name="save" value="Save" class = "save"></td>
+    <td><a href= "artists.php" class = "back">Back</a></td>
   </table>
 </form>
-
-
-
-
+<?php include "footer.php"; ?>
 </body>
 </html>

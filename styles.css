@@ -3,24 +3,33 @@
   color: darkgrey;
 }
 
+body{
+
+}
+
 .updater{
   padding: 0px;
   margin: 0px;
 }
 
-.addButton{
-  padding: 10px;
-  width: 100px;
-  height: 30px;
-  margin:0px;
+header{
+  background: linear-gradient(to top, #808080 0%, #000000 150%);
+  margin-top: 0px;
 }
 
 th{
-  text-align: left;
+  background: linear-gradient(to top, #808080 0%, #000000 300%);
+  color: white;
+  font-weight: normal;
+  text-align: center;
+}
+
+td, small{
+  color:#515A5A;
 }
 
 th, td{
-  padding:5px;
+  padding:8px;
 }
 
 h2, form{
@@ -28,9 +37,15 @@ h2, form{
 }
 
 .search{
-  padding: 5px;
+  padding: 7px;
   width:200px;
-  margin:0px;
+  margin-top: 10px;
+  color: black;
+}
+
+.box{
+  margin: auto;
+
 }
 
 h2{
@@ -41,39 +56,127 @@ h2{
 .box, table{
   padding: 10px;
 }
+tr{
+  /*background-color: #F4F6F6  ;*/
+}
+
+tr:hover{
+  background-color: #F4F6F6;
+  font-weight: bold
+}
+
+
+.deleteButton, .editButton, .blueButton, .back, .addButton, .save{
+  width: auto;
+  height: 20px;
+  font-size: 13px;
+  color: white;
+  text-decoration: none;
+  margin: 0px;
+  border-radius: 4px;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: center;
+}
+
+footer{
+  background-color: grey;
+  margin-top: 40px;
+  margin-bottom: 0px;
+  bottom: 0px;
+}
+
+footer p{
+  text-align: center;
+  margin: 0px;
+  padding: 30px;
+  color: white;
+}
+
+.deleteButton{
+  background-color: #ff4d4d;
+}
+
+.editButton{
+  background-color: #18BC9C;
+}
+
+.blueButton{
+  background-color: #00ace6;
+}
+
+.back{
+  background-color: grey;
+}
+
+.save{
+  background-color: lightgreen;
+  border: none;
+  padding-bottom: 21px;
+  margin-top: 2px;
+
+}
+
+.save:hover{
+  cursor: pointer;
+}
+
+.addButton{
+  margin-top: 10px;
+  background-color: #C12267;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding:11px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: inline-block;
+}
+
+.deleteButton:hover, .editButton:hover, .blueButton:hover, .back:hover, .addButton:hover, .save:hover{
+  opacity: 0.4;
+}
 
 b{
   color:black;
 }
 
 #title{
-  padding-left: 10px;
   letter-spacing: 3px;
-  color: darkgrey;
+  padding: 20px;
+  padding-left: 10px;
+  color: white;
+  text-shadow: 1px 1px grey;
+  text-align: left;
 }
 nav li{
   list-style:none;
-  border: 1px solid grey;
   display: inline-block;
   padding: 10px;
-  background-color: grey;
+  background-color: #656565;
+  /*background: linear-gradient(to top, #808080 0%, #000000 150%);*/
   color:white;
   letter-spacing: 1px;
   transition-duration: 0.4s;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 5px 5px 0px 0px;
 }
 nav li:hover {
   font-weight: bold;
   cursor: pointer;
   color: #00ffd8;
-  /*background-color: rgba(255,255,255,0.3);*/
+  background-color: rgba(255,255,255,0.3);
 }
 
 nav{
-  border: 1px solid grey;
-  background-color: grey;
-
+  background-color:#656565;
+  border-top: 1.2px solid #606060;
+  /*background: linear-gradient(to top, #808080 0%, #000000 150%);*/
 }
 
-body{
+body, html, #title{
   margin: 0px;
 }

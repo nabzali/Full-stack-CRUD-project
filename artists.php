@@ -27,7 +27,7 @@ if (isset ($_GET["del"])){
 <table>
   <thead>
     <tr>
-      <th>Artist ID:</th><th>Artist Name:</th>
+      <th>Artist ID:</th><th>Artist Name:</th><th colspan="3">Options:</th>
     </tr>
   </thead>
   <?php
@@ -38,9 +38,9 @@ if (isset ($_GET["del"])){
             $artist = $row["artName"];
             echo "<tr>";
             echo "<td>" . $row["artID"]. "</td><td>" . $artist . "</td>";?>
-            <td><a href = "artists.php?del=<?php echo $row['artID']?>">Delete</a></td>
-            <td><a href = "editArtist.php?ed=<?php echo $row['artID']?>"class="editButton">Edit</a></td>
-            <td><a href = "albums.php?al=<?php echo $row['artID']?>" class = "blueButton">Albums</a><td>
+            <td><a href = "artists.php?del=<?php echo $row['artID']?>" class = "deleteButton">Delete</a></td>
+            <td><a href = "editArtist.php?ed=<?php echo $row['artID']?>" class = "editButton">Edit</a></td>
+            <td><a href = "albums.php?al=<?php echo $row['artID']?>" class = "blueButton">Albums</a></td>
             <?php echo "</tr>";
         }
     } else {
@@ -54,7 +54,7 @@ if (isset ($_GET["del"])){
   ?>
 </table>
 
-<a href = "addArtist.php"><div class="addButton">Add Artist</div></a>
-
+<a href = "addArtist.php" class="addButton">Add New Artist:</a>
+<?php include "footer.php"; ?>
 </body>
 </html>
