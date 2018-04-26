@@ -1,10 +1,19 @@
 *{
   font-family: Quicksand;
-  color: darkgrey;
+}
+
+::selection{
+  background: beige;
 }
 
 body{
-
+  /*
+  background-image: url("backg2.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  */
+  background-color: #B8B8B8;
 }
 
 .updater{
@@ -41,16 +50,27 @@ h2, form{
   width:200px;
   margin-top: 10px;
   color: black;
+  border: 1px solid lightgrey;
+
 }
 
 .box{
   margin: auto;
+}
 
+.box li{
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  list-style: none;
+  padding: 10px;
 }
 
 h2{
-  padding: 0px;
-  margin: 0px;
+  text-align: center;
+  font-size: 80px;
+  margin-top: 100px;
+  color: palevioletred;
 }
 
 .box, table{
@@ -61,7 +81,7 @@ tr{
 }
 
 tr:hover{
-  background-color: #F4F6F6;
+  background-color: lightgrey;
   font-weight: bold
 }
 

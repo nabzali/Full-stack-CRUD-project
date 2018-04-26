@@ -12,9 +12,9 @@ $total_tracks = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM track"));
 </script>
 <div class = "box">
   <h2>Database metrics:</h2>
-  <li>Number of artists: <?php echo "<b>".$total_artists."</b>" ?></li>
-  <li>Number of CDs/Albums: <?php echo "<b>".$total_albums."</b>" ?></li>
-  <li>Number of Tracks: <?php echo "<b>".$total_tracks."</b>" ?></li>
+  <li>Number of artists... <?php echo "<b>".$total_artists."</b>" ?></li>
+  <li>Number of CDs/Albums... <?php echo "<b>".$total_albums."</b>" ?></li>
+  <li>Number of Tracks... <?php echo "<b>".$total_tracks."</b>" ?></li>
 </div>
 <?php include "footer.php"; ?>
 </body>

@@ -2,16 +2,19 @@
 require "header.php";
 $artists = "SELECT artName FROM artist";
 $result = mysqli_query($conn, $artists);
+
 if (isset($_POST["save"])){
   $newTitle = $_POST["addAlbumTitle"];
   $newPrice = $_POST["addAlbumPrice"];
   $newGenre = $_POST["addAlbumGenre"];
   $newArtist = $_POST["addAlbumArtist"];
-  $get_artID = "SELECT artID FROM artist WHERE artName = $newArtist";
-  $artID_result = mysqli_fetch_field(mysqli_result($conn, $get_artID));
-  $newArtID = $artID_result["artID"];
   $newTracks = $_POST["addAlbumTracks"];
-  $sql = "INSERT INTO cd VALUES (null, $newArtID, $newTitle, $newPrice, $newGenre, $newTracks)";
+
+  $artID_result = mysqli_query($conn, "SELECT artID FROM artist WHERE artName = '$newArtist'");
+  $row1 = mysqli_fetch_row($artID_result);
+  $newArtID = $row1[0];
+
+  $sql = "INSERT INTO cd (cdID, artID, cdTitle, cdPrice, cdGenre, cdNumTracks) VALUES (null, $newArtID, '$newTitle', $newPrice, '$newGenre', $newTracks)";
   mysqli_query($conn, $sql);
 }
 ?>
@@ -40,7 +43,7 @@ if (isset($_POST["save"])){
         <select name = "addAlbumArtist"><?php
           if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)) {?>
-                <option value=""><?php echo $row["artName"]?></option><?php
+                <option><?php echo $row["artName"]?></option><?php
             }
           }
         ?></select>
