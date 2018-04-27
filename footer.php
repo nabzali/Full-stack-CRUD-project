@@ -1,5 +1,5 @@
 <!--
   <footer>
-    <p>G51DBI | Nabeel Ali 2018</p>
+    <p>G51DBI | Nabeel Ali</p>
   </footer>
 -->

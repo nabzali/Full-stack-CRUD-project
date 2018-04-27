@@ -10,18 +10,6 @@ if (isset($_POST["save"])){
 }
 ?>
 <script>
-function checkInput(){
-  var x = /^[a-z0-9]+$/i;
-  var element = document.getElementByID("editArtistInput");
-  if !(element.value.matches(x)){
-    alert("doesnt match");
-    //element.style.border = "1px solid red";
-  }
-  else{
-    alert("I");
-  }
-}
-</script><script>
   //$("h1#title").html("");
   document.getElementById("title").innerHTML = "EDIT ARTIST";
   document.title = "Edit Artist";
@@ -36,11 +24,11 @@ function checkInput(){
   }
 
 </script>
-<form name = "editArtist" onsubmit="checkInput()" class="" action="editArtist.php?ed=<?php echo $_GET["ed"]; ?>" method="post">
+<form name = "editArtist" onsubmit = "return validateForm()" action = "editArtist.php?ed=<?php echo $_GET["ed"];?>" method = "post">
   <table class = "updater">
     <td>Name:</td>
-    <td><input id = "editArtistInput" type="text" name="editArtistInput"></td>
-    <td><input type="submit" name="save" value="Save" class = "save"></td>
+    <td><input id = "editArtistInput" type = "text" name = "editArtistInput"></td>
+    <td><input type = "submit" name = "save" value = "Save" class = "save"></td>
     <!--<td><a href= "artists.php" class = "back">Back</a></td>-->
   </table>
 </form>

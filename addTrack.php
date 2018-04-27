@@ -24,15 +24,15 @@ if (isset($_POST["save"])){
    document.title = "Add Track";
 }
 </script>
-<form name = "addArtist" class="" action="addTrack.php" method="post">
+<form name = "addArtist" action = "addTrack.php" method = "post">
   <table class = "updater">
     <tr>
       <td>Title:</td>
-      <td><input type="text" name="addTrackTitle"></td>
+      <td><input type = "text" name = "addTrackTitle"></td>
     </tr>
     <tr>
       <td>Duration:</td>
-      <td><input type="text" name="addTrackDuration"></td>
+      <td><input type = "text" name = "addTrackDuration"></td>
     </tr>
     <tr>
       <td>Album:</td>
@@ -47,7 +47,7 @@ if (isset($_POST["save"])){
     </td>
     </tr>
     <tr>
-      <td><input type="submit" name="save" value="Save" class = "save"></td>
+      <td><input type = "submit" name = "save" value = "Save" class = "save"></td>
       <!--<td><a href= "tracks.php" class = "back">Back</a></td>-->
     </tr>
   </table>

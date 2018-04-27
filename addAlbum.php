@@ -23,19 +23,19 @@ if (isset($_POST["save"])){
    document.getElementById("title").innerHTML = "ADD ALBUM";
    document.title = "Add Album";
 </script>
-<form class="" action="addAlbum.php" method="post">
+<form action = "addAlbum.php" method = "post">
   <table class = "updater">
     <tr>
       <td>Title:</td>
-      <td><input type="text" name="addAlbumTitle"></td>
+      <td><input type = "text" name = "addAlbumTitle"></td>
     </tr>
     <tr>
       <td>Price:</td>
-      <td><input type="text" name="addAlbumPrice"></td>
+      <td><input type = "text" name = "addAlbumPrice"></td>
     </tr>
     <tr>
       <td>Genre:</td>
-      <td><input type="text" name="addAlbumGenre"></td>
+      <td><input type = "text" name = "addAlbumGenre"></td>
     </tr>
     <tr>
       <td>Artist:</td>
@@ -51,14 +51,14 @@ if (isset($_POST["save"])){
     </tr>
     <tr>
       <td>Tracks:</td>
-      <td><input type="text" name="addAlbumTracks"></td>
+      <td><input type = "text" name = "addAlbumTracks"></td>
     </tr>
     <tr>
-      <td><input type="submit" name="save" value="Save" class = "save"></td>
+      <td><input type = "submit" name = "save" value = "Save" class = "save"></td>
       <!--<td><a href= "albums.php" class = "back">Back</a></td>-->
     </tr>
   </table>
 </form>
-<?php include "footer.php"; ?>
+<?php include "footer.php";?>
 </body>
 </html>

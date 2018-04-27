@@ -20,14 +20,14 @@ if (isset ($_GET["del"])){
     document.title = "Artists";
 </script>
 
-<form class="" action="artists.php" method="post">
-  <input id = "artSearch" class = "search" type="text" name="search1" placeholder="Search Artists...">
+<form action = "artists.php" method = "post">
+  <input id = "artSearch" class = "search" type = "text" name = "search1" placeholder = "Search Artists...">
 </form>
 
 <table>
   <thead>
     <tr>
-      <th>Artist ID:</th><th>Artist Name:</th><th colspan="3">Options:</th>
+      <th>Artist ID:</th><th>Artist Name:</th><th colspan = "3">Options:</th>
     </tr>
   </thead>
   <?php
@@ -54,7 +54,7 @@ if (isset ($_GET["del"])){
   ?>
 </table>
 
-<a href = "addArtist.php" class="addButton">Add New Artist:</a>
+<a href = "addArtist.php" class = "addButton">Add New Artist:</a>
 <?php include "footer.php"; ?>
 </body>
 </html>

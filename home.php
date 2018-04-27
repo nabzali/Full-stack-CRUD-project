@@ -16,6 +16,6 @@ $total_tracks = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM track"));
   <li>Number of CDs/Albums... <?php echo "<b>".$total_albums."</b>" ?></li>
   <li>Number of Tracks... <?php echo "<b>".$total_tracks."</b>" ?></li>
 </div>
-<?php include "footer.php"; ?>
+<?php include "footer.php";?>
 </body>
 </html>

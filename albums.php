@@ -25,14 +25,14 @@ if (isset ($_GET["al"])){
     document.title = "Albums";
 </script>
 
-<form class="" action="albums.php" method="post">
-  <input id = "albumSearch" class = "search" type="text" name="search2" placeholder="Search Albums...">
+<form action = "albums.php" method = "post">
+  <input id = "albumSearch" class = "search" type = "text" name = "search2" placeholder = "Search Albums...">
 </form>
 
 <table>
   <thead>
     <tr>
-      <th>CD ID:</th><th>Title:</th><th>Price:</th><th>Genre:</th><th>No. Tracks:</th><th>Artist Name:</th><th colspan="3">Options:</th>
+      <th>CD ID:</th><th>Title:</th><th>Price:</th><th>Genre:</th><th>No. Tracks:</th><th>Artist Name:</th><th colspan = "3">Options:</th>
     </tr>
   </thead>
   <?php
@@ -56,7 +56,7 @@ if (isset ($_GET["al"])){
 
   ?>
 </table>
-<a href = "addAlbum.php" class="addButton">Add New Album</a>
+<a href = "addAlbum.php" class = "addButton">Add New Album</a>
 <?php include "footer.php"; ?>
 </body>
 </html>

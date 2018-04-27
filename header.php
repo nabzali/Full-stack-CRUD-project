@@ -2,12 +2,12 @@
   require "connect.php";
 ?>
  <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang = "en" dir = "ltr"> <!-- Language: English, Direction: Left-to-Right !-->
   <head>
     <script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
-     <meta charset="utf-8">
+     <meta charset = "utf-8"> <!-- Character set UTF8, allows encoding of 1112064 unicode characters!-->
      <title></title>
-     <link rel="stylesheet" href="styles.css">
+     <link rel = "stylesheet" href = "styles.css">
      <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
    </head>
    <body>
@@ -20,6 +20,3 @@
           <a href = "tracks.php"><li>Tracks</li></a>
         </nav>
       </header>
-  <!--
-  </body>
-  -->

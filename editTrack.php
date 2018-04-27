@@ -22,15 +22,15 @@ if (isset($_POST["save"])){
     document.getElementById("title").innerHTML = "EDIT TRACK";
     document.title = "Edit Track";
 </script>
-<form class="" action="editTrack.php?id=<?php echo $_GET['ed']?>" method="post">
+<form action = "editTrack.php?id=<?php echo $_GET['ed']?>" method = "post">
   <table class = "updater">
     <tr>
       <td>Title:</td>
-      <td><input type="text" name="editTrackTitle"></td>
+      <td><input type = "text" name = "editTrackTitle"></td>
     </tr>
     <tr>
       <td>Duration:</td>
-      <td><input type="text" name="editTrackDuration"></td>
+      <td><input type = "text" name = "editTrackDuration"></td>
     </tr>
     <tr>
       <td>Album:</td>
@@ -45,7 +45,7 @@ if (isset($_POST["save"])){
     </td>
     </tr>
     <tr>
-      <td><input type="submit" name="save" value="Save" class = "save"></td>
+      <td><input type = "submit" name = "save" value = "Save" class = "save"></td>
       <!--<td><a href= "tracks.php" class = "back">Back</a></td>-->
     </tr>
   </table>

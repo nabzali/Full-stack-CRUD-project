@@ -25,14 +25,14 @@ if (isset ($_GET["tr"])){
     document.title = "Tracks";
 </script>
 
-<form class="" action="tracks.php" method="post">
-  <input id = "trackSearch" class = "search" type="text" name="search3" placeholder="Search Tracks...">
+<form action = "tracks.php" method = "post">
+  <input id = "trackSearch" class = "search" type = "text" name = "search3" placeholder = "Search Tracks...">
 </form>
 
 <table>
   <thead>
     <tr>
-      <th>Track ID:</th><th>Track Title:</th><th>Track Duration:</th><th>CD Title:</th><th>Artist Name:</th><th colspan="2">Options:</th>
+      <th>Track ID:</th><th>Track Title:</th><th>Track Duration:</th><th>CD Title:</th><th>Artist Name:</th><th colspan = "2">Options:</th>
     </tr>
   </thead>
   <?php
@@ -43,7 +43,7 @@ if (isset ($_GET["tr"])){
             echo "<tr>";
             echo "<td>" . $row["trackID"]. "</td><td>" . $row["trackName"] . "</td><td>" . $row["trackDuration"] . "</td><td>" . $row["cdTitle"] . "</td><td>" . $row["artName"] . "</td>"; ?>
             <td><a href = "tracks.php?del=<?php echo $row['trackID']?>" class = "deleteButton">Delete</a></td>
-            <td><a href = "editTrack.php?ed=<?php echo $row['trackID']?>"class="editButton">Edit</a></td>
+            <td><a href = "editTrack.php?ed=<?php echo $row['trackID']?>"class = "editButton">Edit</a></td>
             <?php echo "</tr>";
         }
     } else {
@@ -54,7 +54,7 @@ if (isset ($_GET["tr"])){
 
   ?>
 </table>
-<a href = "addTrack.php" class="addButton">Add New Track:</a>
+<a href = "addTrack.php" class = "addButton">Add New Track:</a>
 <?php include "footer.php"; ?>
 </body>
 </html>

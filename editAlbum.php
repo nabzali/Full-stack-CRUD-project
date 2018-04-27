@@ -25,19 +25,19 @@ if (isset($_POST["save"])){
     document.getElementById("title").innerHTML = "EDIT ALBUM";
     document.title = "Edit Album";
 </script>
-<form class="" action="editAlbum.php?id=<?php echo $_GET['ed']?>" method="post">
+<form action = "editAlbum.php?id=<?php echo $_GET['ed']?>" method = "post">
   <table class = "updater">
     <tr>
       <td>Title:</td>
-      <td><input type="text" name="editAlbumTitle"></td>
+      <td><input type = "text" name = "editAlbumTitle"></td>
     </tr>
     <tr>
       <td>Price:</td>
-      <td><input type="text" name="editAlbumPrice"></td>
+      <td><input type = "text" name = "editAlbumPrice"></td>
     </tr>
     <tr>
       <td>Genre:</td>
-      <td><input type="text" name="editAlbumGenre"></td>
+      <td><input type = "text" name = "editAlbumGenre"></td>
     </tr>
     <tr>
       <td>Artist:</td>
@@ -53,10 +53,10 @@ if (isset($_POST["save"])){
     </tr>
     <tr>
       <td>Tracks:</td>
-      <td><input type="text" name="editAlbumTracks"></td>
+      <td><input type = "text" name = "editAlbumTracks"></td>
     </tr>
     <tr>
-      <td><input type="submit" name="save" value="Save" class = "save"></td>
+      <td><input type = "submit" name = "save" value = "Save" class = "save"></td>
       <!--<td><a href= "albums.php" class = "back">Back</a></td>-->
     </tr>
   </table>
