@@ -16,7 +16,7 @@ if (isset($_POST["save"])){
 
   $sql = "UPDATE cd SET cdTitle = '$newTitle', cd.artID = $newArtID, cdPrice = $newPrice, cdGenre = '$newGenre', cdNumTracks = $newTracks WHERE cdID = $id";
   mysqli_query($conn, $sql);
-  header("Location: albums.php");
+
 }
 
 ?>
@@ -24,25 +24,55 @@ if (isset($_POST["save"])){
     //$("h1#title").html("");
     document.getElementById("title").innerHTML = "EDIT ALBUM";
     document.title = "Edit Album";
+
+    var inputs = ["editAlbumTitle", "editAlbumPrice", "editAlbumTracks", "editAlbumGenre"];
+
+    function validateForm() {
+       var invalid = false;
+       for (var i = 0; i < inputs.length; i++){
+         if (document.getElementById(inputs[i]).value == "") {
+             document.getElementById(inputs[i]).style.border = "1px solid red";
+             invalid = true;
+         }
+         else{
+           document.getElementById(inputs[i]).style.border = "0px solid #000";
+         }
+       }
+       for (var j = 1; j < 3; j++){
+         if (isNaN(document.getElementById(inputs[j]).value)){
+           document.getElementById(inputs[j]).style.border = "1px solid red";
+           invalid = true;
+         }
+         else{
+           if (document.getElementById(inputs[j]).style.border != "1px solid red"){
+             document.getElementById(inputs[j]).style.border = "0px solid #000";
+           }
+         }
+       }
+       if (invalid == true){
+         return false;
+       }
+    }
+
 </script>
-<form action = "editAlbum.php?id=<?php echo $_GET['ed']?>" method = "post">
+<form action = "editAlbum.php?id=<?php echo $_GET['ed']?>" onsubmit = "return validateForm()" method = "post">
   <table class = "updater">
     <tr>
       <td>Title:</td>
-      <td><input type = "text" name = "editAlbumTitle"></td>
+      <td><input type = "text" name = "editAlbumTitle" id = "editAlbumTitle"></td>
     </tr>
     <tr>
       <td>Price:</td>
-      <td><input type = "text" name = "editAlbumPrice"></td>
+      <td><input type = "text" name = "editAlbumPrice" id = "editAlbumPrice"></td>
     </tr>
     <tr>
       <td>Genre:</td>
-      <td><input type = "text" name = "editAlbumGenre"></td>
+      <td><input type = "text" name = "editAlbumGenre" id = "editAlbumGenre"></td>
     </tr>
     <tr>
       <td>Artist:</td>
       <td>
-        <select name = "editAlbumArtist"><?php
+        <select name = "editAlbumArtist" id = "editAlbumArtist"><?php
           if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)) {?>
                 <option><?php echo $row["artName"]?></option><?php
@@ -53,7 +83,7 @@ if (isset($_POST["save"])){
     </tr>
     <tr>
       <td>Tracks:</td>
-      <td><input type = "text" name = "editAlbumTracks"></td>
+      <td><input type = "text" name = "editAlbumTracks" id = "editAlbumTracks"></td>
     </tr>
     <tr>
       <td><input type = "submit" name = "save" value = "Save" class = "save"></td>
