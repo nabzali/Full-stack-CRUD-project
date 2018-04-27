@@ -55,7 +55,7 @@ if (isset($_POST["save"])){
     </tr>
     <tr>
       <td><input type="submit" name="save" value="Save" class = "save"></td>
-      <td><a href= "albums.php" class = "back">Back</a></td>
+      <!--<td><a href= "albums.php" class = "back">Back</a></td>-->
     </tr>
   </table>
 </form>

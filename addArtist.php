@@ -10,13 +10,22 @@ if (isset($_POST["save"])){
      //$("h1#title").html("");
    document.getElementById("title").innerHTML = "ADD ARTIST";
    document.title = "Add Artist";
+
+   function validateForm() {
+    var x = document.forms["addArtist"]["addArtistInput"].value;
+    if (x == "") {
+        document.getElementById("addArtistInput").style.border = "1px solid red";
+        //alert("Cannot leave field blank");
+        return false;
+    }
+   }
 </script>
-<form class="" action="addArtist.php" method="post">
+<form name = "addArtist" action="addArtist.php" method="post" onsubmit="return validateForm()">
   <table class = "updater">
     <td>Name:</td>
-    <td><input type="text" name="addArtistInput"></td>
+    <td><input id = "addArtistInput" type="text" name="addArtistInput"></td>
     <td><input type="submit" name="save" value="Save" class = "save"></td>
-    <td><a href= "artists.php" class = "back">Back</a></td>
+    <!--<td><a href= "artists.php" class = "back">Back</a></td>-->
   </table>
 </form>
 <?php include "footer.php"; ?>

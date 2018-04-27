@@ -14,10 +14,9 @@ if (isset($_POST["save"])){
   $row1 = mysqli_fetch_row($artID_result);
   $newArtID = $row1[0];
 
-
   $sql = "UPDATE cd SET cdTitle = '$newTitle', cd.artID = $newArtID, cdPrice = $newPrice, cdGenre = '$newGenre', cdNumTracks = $newTracks WHERE cdID = $id";
   mysqli_query($conn, $sql);
-  header("Location: editAlbum.php?id=$id");
+  header("Location: albums.php");
 }
 
 ?>
@@ -58,7 +57,7 @@ if (isset($_POST["save"])){
     </tr>
     <tr>
       <td><input type="submit" name="save" value="Save" class = "save"></td>
-      <td><a href= "albums.php" class = "back">Back</a></td>
+      <!--<td><a href= "albums.php" class = "back">Back</a></td>-->
     </tr>
   </table>
 </form>
