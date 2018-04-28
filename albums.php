@@ -43,7 +43,7 @@ if (isset ($_GET["al"])){
             echo "<tr>";
             echo "<td>" . $row["cdID"]. "</td><td>" . $row["cdTitle"] . "</td><td>" . "<small>$</small>" . $row["cdPrice"] . "</td><td>" . $row["cdGenre"] . "</td><td>" . $row["cdNumTracks"] . "</td><td>" . $row["artName"] . "</td>";
             ?>
-            <td><a href = "albums.php?del=<?php echo $row['cdID']?>" class = "deleteButton" onclick = "alert('Are you sure you want to delete this Album?')"= >Delete</a></td>
+            <td><a href = "albums.php?del=<?php echo $row['cdID']?>" class = "deleteButton" onclick = "return confirm('Are you sure you want to delete this Album?')"= >Delete</a></td>
             <td><a href = "editAlbum.php?ed=<?php echo $row['cdID']?>" class = "editButton">Edit</a></td>
             <td><a href = "tracks.php?tr=<?php echo $row['cdID']?>" class = "blueButton">Tracks</a></td>
             <?php echo "</tr>";
