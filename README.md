@@ -7,7 +7,7 @@ A web development project - provides a user-friendly interface to a database. In
 - PHP
 - SQL
 
-This project allows a user to easily create, read, update and delete data from a database (CRUD).
+This project allows a user to easily create, read, update and delete (CRUD) data from a database. The database is based on a catalogue of CDs, and includes 3 tables: Artists, Albums (CDs) and Tracks.
 
 Screenshots
 --
