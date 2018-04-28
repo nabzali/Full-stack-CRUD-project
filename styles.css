@@ -6,6 +6,10 @@
   background: beige;
 }
 
+.input{
+  padding-left: 3.5px;
+}
+
 body{
   /*
   background-image: url("backg2.jpg");

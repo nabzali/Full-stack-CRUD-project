@@ -57,15 +57,15 @@ if (isset($_POST["save"])){
   <table class = "updater">
     <tr>
       <td>Title:</td>
-      <td><input type = "text" name = "addAlbumTitle" id = "addAlbumTitle"></td>
+      <td><input class = "input" type = "text" name = "addAlbumTitle" id = "addAlbumTitle"></td>
     </tr>
     <tr>
       <td>Price:</td>
-      <td><input type = "text" name = "addAlbumPrice" id = "addAlbumPrice"></td>
+      <td><input class = "input" type = "text" name = "addAlbumPrice" id = "addAlbumPrice"></td>
     </tr>
     <tr>
       <td>Genre:</td>
-      <td><input type = "text" name = "addAlbumGenre" id = "addAlbumGenre"></td>
+      <td><input class = "input" type = "text" name = "addAlbumGenre" id = "addAlbumGenre"></td>
     </tr>
     <tr>
       <td>Artist:</td>
@@ -81,7 +81,7 @@ if (isset($_POST["save"])){
     </tr>
     <tr>
       <td>Tracks:</td>
-      <td><input type = "text" name = "addAlbumTracks" id = "addAlbumTracks"></td>
+      <td><input class = "input" type = "text" name = "addAlbumTracks" id = "addAlbumTracks"></td>
     </tr>
     <tr>
       <td><input type = "submit" name = "save" value = "Save" class = "save"></td>

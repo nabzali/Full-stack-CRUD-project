@@ -54,11 +54,11 @@ if (isset($_POST["save"])){
   <table class = "updater">
     <tr>
       <td>Title:</td>
-      <td><input type = "text" name = "addTrackTitle" id = "addTrackTitle"></td>
+      <td><input class = "input" type = "text" name = "addTrackTitle" id = "addTrackTitle"></td>
     </tr>
     <tr>
       <td>Duration:</td>
-      <td><input type = "text" name = "addTrackDuration" id = "addTrackDuration"></td>
+      <td><input class = "input" type = "text" name = "addTrackDuration" id = "addTrackDuration"></td>
     </tr>
     <tr>
       <td>Album:</td>

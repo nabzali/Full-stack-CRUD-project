@@ -23,7 +23,7 @@ if (isset($_POST["save"])){
 <form name = "addArtist" action = "addArtist.php" method = "post" onsubmit = "return validateForm()">
   <table class = "updater">
     <td>Name:</td>
-    <td><input id = "addArtistInput" type = "text" name = "addArtistInput"></td>
+    <td><input class = "input" id = "addArtistInput" type = "text" name = "addArtistInput"></td>
     <td><input type = "submit" name = "save" value = "Save" class = "save"></td>
     <!--<td><a href= "artists.php" class = "back">Back</a></td>-->
   </table>

@@ -54,11 +54,11 @@ if (isset($_POST["save"])){
   <table class = "updater">
     <tr>
       <td>Title:</td>
-      <td><input type = "text" name = "editTrackTitle" id = "editTrackTitle" value = "<?php echo $_GET['title']?>"></td>
+      <td><input class = "input" type = "text" name = "editTrackTitle" id = "editTrackTitle" value = "<?php echo $_GET['title']?>"></td>
     </tr>
     <tr>
       <td>Duration:</td>
-      <td><input type = "text" name = "editTrackDuration" id = "editTrackDuration" value = "<?php echo $_GET['duration']?>"></td>
+      <td><input class = "input" type = "text" name = "editTrackDuration" id = "editTrackDuration" value = "<?php echo $_GET['duration']?>"></td>
     </tr>
     <tr>
       <td>Album:</td>
