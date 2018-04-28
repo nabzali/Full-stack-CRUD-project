@@ -39,7 +39,7 @@ if (isset ($_GET["del"])){
             echo "<tr>";
             echo "<td>" . $row["artID"]. "</td><td>" . $artist . "</td>";?>
             <td><a href = "artists.php?del=<?php echo $row['artID']?>" class = "deleteButton" onclick = "return confirm('Are you sure you want to delete this Artist?')">Delete</a></td>
-            <td><a href = "editArtist.php?ed=<?php echo $row['artID']?>" class = "editButton">Edit</a></td>
+            <td><a href = "editArtist.php?ed=<?php echo $row['artID'] . "&name=" . $row['artName']?>" class = "editButton">Edit</a></td>
             <td><a href = "albums.php?al=<?php echo $row['artID']?>" class = "blueButton">Albums</a></td>
             <?php echo "</tr>";
         }

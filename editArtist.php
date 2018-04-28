@@ -27,7 +27,7 @@ if (isset($_POST["save"])){
 <form name = "editArtist" onsubmit = "return validateForm()" action = "editArtist.php?ed=<?php echo $_GET["ed"];?>" method = "post">
   <table class = "updater">
     <td>Name:</td>
-    <td><input id = "editArtistInput" type = "text" name = "editArtistInput"></td>
+    <td><input id = "editArtistInput" type = "text" name = "editArtistInput" value = "<?php echo $_GET["name"]?>"></td>
     <td><input type = "submit" name = "save" value = "Save" class = "save"></td>
     <!--<td><a href= "artists.php" class = "back">Back</a></td>-->
   </table>

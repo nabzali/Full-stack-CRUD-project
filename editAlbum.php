@@ -59,15 +59,15 @@ if (isset($_POST["save"])){
   <table class = "updater">
     <tr>
       <td>Title:</td>
-      <td><input type = "text" name = "editAlbumTitle" id = "editAlbumTitle"></td>
+      <td><input type = "text" name = "editAlbumTitle" id = "editAlbumTitle" value = "<?php echo $_GET['title'] ?>"></td>
     </tr>
     <tr>
       <td>Price:</td>
-      <td><input type = "text" name = "editAlbumPrice" id = "editAlbumPrice"></td>
+      <td><input type = "text" name = "editAlbumPrice" id = "editAlbumPrice" value = "<?php echo $_GET['price'] ?>"></td>
     </tr>
     <tr>
       <td>Genre:</td>
-      <td><input type = "text" name = "editAlbumGenre" id = "editAlbumGenre"></td>
+      <td><input type = "text" name = "editAlbumGenre" id = "editAlbumGenre" value = "<?php echo $_GET['genre'] ?>"></td>
     </tr>
     <tr>
       <td>Artist:</td>
@@ -75,7 +75,7 @@ if (isset($_POST["save"])){
         <select name = "editAlbumArtist" id = "editAlbumArtist"><?php
           if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)) {?>
-                <option><?php echo $row["artName"]?></option><?php
+                <option <?php if ($row["artName"] == $_GET['artist']) echo "selected"?>><?php echo $row["artName"]?></option><?php
             }
           }
         ?></select>
@@ -83,7 +83,7 @@ if (isset($_POST["save"])){
     </tr>
     <tr>
       <td>Tracks:</td>
-      <td><input type = "text" name = "editAlbumTracks" id = "editAlbumTracks"></td>
+      <td><input type = "text" name = "editAlbumTracks" id = "editAlbumTracks" value = "<?php echo $_GET['tracks'] ?>"></td>
     </tr>
     <tr>
       <td><input type = "submit" name = "save" value = "Save" class = "save"></td>

@@ -54,11 +54,11 @@ if (isset($_POST["save"])){
   <table class = "updater">
     <tr>
       <td>Title:</td>
-      <td><input type = "text" name = "editTrackTitle" id = "editTrackTitle"></td>
+      <td><input type = "text" name = "editTrackTitle" id = "editTrackTitle" value = "<?php echo $_GET['title']?>"></td>
     </tr>
     <tr>
       <td>Duration:</td>
-      <td><input type = "text" name = "editTrackDuration" id = "editTrackDuration"></td>
+      <td><input type = "text" name = "editTrackDuration" id = "editTrackDuration" value = "<?php echo $_GET['duration']?>"></td>
     </tr>
     <tr>
       <td>Album:</td>
@@ -66,7 +66,7 @@ if (isset($_POST["save"])){
         <select name = "editTrackAlbum" id = "editTrackAlbum"><?php
           if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)) {?>
-                <option><?php echo $row["cdTitle"]?></option><?php
+                <option <?php if ($row["cdTitle"] == $_GET['album']) echo "selected"?>><?php echo $row["cdTitle"]?></option><?php
             }
           }
         ?></select>
