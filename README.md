@@ -12,7 +12,7 @@ This project allows a user to easily create, read, update and delete (CRUD) data
 Screenshots
 --
 <img src = "https://github.com/nabzali/Full-stack-CRUD-project/blob/master/home.PNG?raw=true" width = "652px" height = "375px"><br><br>
-<img src = "https://github.com/nabzali/Full-stack-CRUD-project/blob/master/albums.PNG?raw=true" width = "652px" height = "375px"><br<br>
+<img src = "https://github.com/nabzali/Full-stack-CRUD-project/blob/master/albums.PNG?raw=true" width = "652px" height = "375px"><br><br>
 How it works
 --
 [XAMPP](https://www.apachefriends.org/index.html) is a software package which gives you the priveledge of connecting to an Apache server. Using Apache, along with MySQL, you can perform CRUD operations on databases with the help of the phyMyAdmin software tool provided. 
