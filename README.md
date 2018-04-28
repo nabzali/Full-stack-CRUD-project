@@ -1,6 +1,6 @@
 # CRUD project
 
-User-friendly web development project. Involved are the following front-end and back-end technologies:
+A web development project - provides a user-friendly interface to a database. Involved are the following front-end and back-end technologies:
 - HTML
 - CSS
 - JavaScript (+JQuery)
