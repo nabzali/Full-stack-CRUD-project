@@ -16,6 +16,7 @@ if (isset($_POST["save"])){
 
   $sql = "UPDATE cd SET cdTitle = '$newTitle', cd.artID = $newArtID, cdPrice = $newPrice, cdGenre = '$newGenre', cdNumTracks = $newTracks WHERE cdID = $id";
   mysqli_query($conn, $sql);
+  header("Location: albums.php");
 
 }
 

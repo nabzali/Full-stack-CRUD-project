@@ -14,6 +14,7 @@ if (isset($_POST["save"])){
 
   $sql = "UPDATE track SET cdID = $new_CD_ID, trackName = '$newTitle', trackDuration = $newDuration WHERE trackID = $id";
   mysqli_query($conn, $sql);
+  header("Location: tracks.php");
 }
 ?>
 <script>

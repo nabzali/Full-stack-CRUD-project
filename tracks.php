@@ -42,7 +42,7 @@ if (isset ($_GET["tr"])){
         while($row = mysqli_fetch_assoc($select_track_result)) {
             echo "<tr>";
             echo "<td>" . $row["trackID"]. "</td><td>" . $row["trackName"] . "</td><td>" . $row["trackDuration"] . "</td><td>" . $row["cdTitle"] . "</td><td>" . $row["artName"] . "</td>"; ?>
-            <td><a href = "tracks.php?del=<?php echo $row['trackID']?>" class = "deleteButton" onclick = "return confirm('Are you sure you want to delete this Artist?')">Delete</a></td>
+            <td><a href = "tracks.php?del=<?php echo $row['trackID']?>" class = "deleteButton" onclick = "return confirm('Are you sure you want to delete this Track?')">Delete</a></td>
             <td><a href = "editTrack.php?ed=<?php echo $row['trackID'] . "&title=" . $row['trackName'] . "&duration=" . $row['trackDuration'] . "&album=" . $row['cdTitle']?>" class = "editButton">Edit</a></td>
             <?php echo "</tr>";
         }
