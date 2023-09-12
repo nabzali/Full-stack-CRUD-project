@@ -1,13 +1,15 @@
 # CRUD project
 
-A web development project - provides a user-friendly interface to a database. Involved are the following front-end and back-end technologies:
+A web development project - featuring a user-friendly interface. The following technologies were used in the development of this project:
 - HTML
 - CSS
 - JavaScript (+JQuery)
 - PHP
 - SQL
 
-This project allows a user to easily create, read, update and delete (CRUD) data from a database. The database is based on a catalogue of CDs, and includes 3 tables: Artists, Albums (CDs) and Tracks.
+This project allows a user to easily create, read, update and delete (CRUD) records related to music (artists, albums and tracks).
+- An artist can have many albums (1 to many relationship)
+- An album can have many tracks (1 to many relationship)
 
 Screenshots
 --
