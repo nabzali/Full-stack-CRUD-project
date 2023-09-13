@@ -11,7 +11,7 @@ This project allows a user to easily create, read, update and delete (CRUD) reco
 - An artist can have many albums (1 to many relationship)
 - An album can have many tracks (1 to many relationship)
 
-There are three tabs - each corresponding to an entity of the database. Upon clicking on a tab, the user is presented with a view of the records within the database table plus related data, along with delete/edit/create options.
+In addition to a homepage showing database metrics, there are 3 other tabs - each corresponding to an entity of the database. Upon clicking on a tab, the user is presented with a view of the records within the database table plus related data, along with delete/edit/create options.
 
 Screenshots
 --
