@@ -1,4 +1,4 @@
-# CRUD project
+# First Year University CRUD project
 
 A web development project - featuring a user-friendly interface. The following technologies were used in the development of this project:
 - HTML
